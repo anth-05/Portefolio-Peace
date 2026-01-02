@@ -360,3 +360,71 @@ footer {
         text-align: center;
     }
 }
+/* ==========================================================================
+   Mobile & Tablet Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0px 20px;
+    }
+    .image-container {
+        width: 300px;
+        height: 400px;
+    }
+    .logo span {
+        display: none; /* Hide subtitle on mobile for space */
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .tools-grid { 
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons on mobile */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .testimonial-card:hover {
+        transform: none; /* Disable horizontal hover on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-grid { 
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+    
+    .section-title {
+        text-align: center;
+    }
+}
