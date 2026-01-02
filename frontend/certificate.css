@@ -1,0 +1,95 @@
+/* Certificate Specific Layout */
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Large space between certificates for an editorial feel */
+    margin-top: 40px;
+}
+
+.cert-item {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Image takes more space than text */
+    gap: 50px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 60px;
+}
+
+.cert-image {
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.cert-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.cert-item:hover .cert-image img {
+    transform: scale(1.03);
+}
+
+.cert-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.cert-meta {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.cert-description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* --- Responsive Adjustments for Certificates --- */
+@media (max-width: 992px) {
+    .cert-item {
+        grid-template-columns: 1fr; /* Stack on tablet/mobile */
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .cert-grid {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-info h3 {
+        font-size: 1.5rem;
+    }
+}
+.cert-download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.cert-download-btn:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
